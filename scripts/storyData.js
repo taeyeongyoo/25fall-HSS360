@@ -40,7 +40,8 @@ export const storyGraph = {
   },
   act1_mirror: {
     label: "제1막 · 거울 앞에서",
-    background: "linear-gradient(120deg, #1a1427, #2b2142, #3d3563)",
+    //background: "linear-gradient(120deg, #1a1427, #2b2142, #3d3563)",
+    background: "url('assets/backgrounds/act1_mirror.webp')",
     speaker: "교씨",
     lines: [
       "사씨는 내 손을 가만히 잡아준다. 따뜻하지만 어딘가 서늘한 온기였다.",
@@ -136,7 +137,8 @@ export const storyGraph = {
   },
   act2_birth_chamber: {
     label: "제2막 · 기회의 잉태",
-    background: "linear-gradient(120deg, #402824, #704232, #9a6143)",
+    //background: "linear-gradient(120deg, #402824, #704232, #9a6143)",
+    background: "url('assets/backgrounds/act2_birth_chamber.webp')",
     speaker: "교씨",
     lines: [
       "내 아들 '장주'가 태어났다. 내가 아들을 낳자, 가문의 공기가 바뀌었다.",
@@ -158,7 +160,8 @@ export const storyGraph = {
   },
   act2_sassi_visit: {
     label: "제2막 · 사씨의 방문",
-    background: "linear-gradient(120deg, #2a1d31, #4a2f4e, #674163)",
+    //background: "linear-gradient(120deg, #2a1d31, #4a2f4e, #674163)",
+    background: "url('assets/backgrounds/act2_sassi_visit.webp')",
     speaker: "교씨",
     lines: [
       "방 안의 소란이 얼어붙는다. 사씨 부인이 흐트러짐 없는 모습으로 들어와 내 품의 아기만 응시한다.",
@@ -204,7 +207,8 @@ export const storyGraph = {
   },
   act2_result_stability: {
     label: "안정 루트 · 장주를 내어주다",
-    background: "linear-gradient(120deg, #1a231f, #2e3c35, #445a4a)",
+    //background: "linear-gradient(120deg, #1a231f, #2e3c35, #445a4a)",
+    background: "url('assets/backgrounds/act2_result_stability.webp')",
     speaker: "교씨",
     lines: [
       '나는 조용히 고개를 숙였다. "부인의 뜻이 그러하시다면, 기꺼이 따르겠습니다."',
@@ -227,7 +231,8 @@ export const storyGraph = {
   },
   act2_result_charmer: {
     label: "제3 루트 · 동정의 지렛대",
-    background: "linear-gradient(120deg, #2a1b2f, #4c2c4e, #6a3c68)",
+    //background: "linear-gradient(120deg, #2a1b2f, #4c2c4e, #6a3c68)",
+    background: "url('assets/backgrounds/act2_result_charmer.webp')",
     speaker: "교씨",
     lines: [
       '나는 눈가를 적시며 유한림을 바라보았다. "대감... 아직 제 품을 떠나기엔 너무 어린 아이입니다."',
@@ -345,14 +350,15 @@ export const storyGraph = {
   },
   act3_dongcheong: {
     label: "제3막 · 동청의 속삭임",
-    background: "linear-gradient(120deg, #130f1f, #231b33, #362847)",
+    //background: "linear-gradient(120deg, #130f1f, #231b33, #362847)",
+    background: "url('assets/backgrounds/act3_dongcheong.webp')",
     speaker: "교씨",
     lines: [
       "늦은 밤, 문객 동청이 몰래 들이닥쳤다. 모든 비밀을 아는 자.",
       "나는 그를 꾸짖었지만, 그는 비웃으며 속삭였다.",
       '동청: "성인군자 사씨 부인의 그늘에 가려 평생 그림자로 살 셈입니까?"',
       '그는 사씨를 제거할 잔혹한 계략을 제시한다. "마님께서 낳으신 아들을 이용하는 것입니다."',
-      "원작에서처럼 친아들을 희생해 사씨에게 죄를 뒤집어씌우자는 제안.",
+      "친아들을 희생해 사씨에게 죄를 뒤집어씌우자는 제안.",
       "그의 손을 잡을 것인가, 뿌리칠 것인가.",
     ],
     options: [
@@ -427,7 +433,8 @@ export const storyGraph = {
   },
   act3_result_ambition: {
     label: "야망 루트 확정",
-    background: "linear-gradient(120deg, #310c16, #5c1620, #861f29)",
+    //background: "linear-gradient(120deg, #310c16, #5c1620, #861f29)",
+    background: "url('assets/backgrounds/act3_result_ambition.webp')",
     speaker: "교씨",
     lines: [
       '"...자세히 말해보게. 내 아들을 어떻게 희생시키겠다는 것인가."',
@@ -446,7 +453,8 @@ export const storyGraph = {
   },
   act3_result_stability: {
     label: "안정 루트 확정",
-    background: "linear-gradient(120deg, #13241f, #1f3a32, #2d5145)",
+    //background: "linear-gradient(120deg, #13241f, #1f3a32, #2d5145)",
+    background: "url('assets/backgrounds/act3_result_stability.webp')",
     speaker: "교씨",
     lines: [
       '"더러운 입 닥치지 못할까! 내 아들을 걸고넘어지다니! 당장 꺼져라!"',
@@ -533,7 +541,7 @@ export const storyGraph = {
     speaker: "교씨",
     lines: [
       "나는 동청을 장기말로 삼아 조정에 상소를 올리고, 뇌물을 써서 유배지의 바람을 움직였다.",
-      "“남편을 구하기 위해 애쓰는 아내”라는 역할을 완벽히 연기해야 한다.",
+      "'남편을 구하기 위해 애쓰는 아내'라는 역할을 완벽히 연기해야 한다.",
     ],
     options: [
       {
@@ -551,7 +559,8 @@ export const storyGraph = {
   },
   act5_ending_a: {
     label: "제5막 · 권선징악",
-    background: "linear-gradient(120deg, #280509, #4a0e13, #72171d)",
+    //background: "linear-gradient(120deg, #280509, #4a0e13, #72171d)",
+    background: "url('assets/backgrounds/act5_ending_a.webp')",
     speaker: "교씨",
     lines: [
       "몇 년이 지나 나는 동청과 함께 유한림의 재산을 빼돌려 저택의 주인이 되었다.",
@@ -570,7 +579,8 @@ export const storyGraph = {
   },
   act5_ending_b: {
     label: "제5막 · 공존",
-    background: "linear-gradient(120deg, #122422, #1c3634, #254745)",
+    //background: "linear-gradient(120deg, #122422, #1c3634, #254745)",
+    background: "url('assets/backgrounds/act5_ending_b.webp')",
     speaker: "교씨",
     lines: [
       "유한림 없는 세월 동안 나는 문을 걸어 잠그고 장주만 지켰다.",
@@ -588,7 +598,8 @@ export const storyGraph = {
   },
   act5_ending_c: {
     label: "제5막 · 교씨의 변론",
-    background: "linear-gradient(120deg, #2f1f41, #4d3265, #6b4487)",
+    //background: "linear-gradient(120deg, #2f1f41, #4d3265, #6b4487)",
+    background: "url('assets/backgrounds/act5_ending_c.webp')",
     speaker: "교씨",
     lines: [
       "유배 기간 동안 나는 모든 매혹과 지략을 동원해 유한림을 구명했다.",
