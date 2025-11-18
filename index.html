@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>사씨남정기: 교씨의 변론</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <main class="vn-stage" aria-live="polite">
+      <div id="vn-background" class="vn-background" aria-hidden="true"></div>
+      <div
+        id="vn-start-screen"
+        class="vn-start-screen"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="vn-start-title"
+      >
+        <div class="vn-start-panel">
+          <p id="vn-start-title" class="vn-start-title">사씨남정기: 교씨의 변론</p>
+          <p id="vn-start-subtitle" class="vn-start-subtitle">조선 궁중 법정에서 시작되는 선택형 서사</p>
+          <button type="button" id="vn-start-button" class="vn-start-button">Start the performance</button>
+        </div>
+      </div>
+      <div class="vn-overlay">
+        <section id="vn-dialogue" class="vn-dialogue" aria-live="polite">
+          <p id="vn-scene-label" class="vn-scene-label"></p>
+          <p id="vn-speaker" class="vn-speaker"></p>
+          <p id="vn-text" class="vn-text"></p>
+        </section>
+      </div>
+      <div
+        id="vn-options-overlay"
+        class="vn-options-overlay"
+        aria-live="polite"
+        aria-label="Available choices"
+        aria-hidden="true"
+      >
+        <div class="vn-options-panel">
+          <div id="vn-options" class="vn-option-list"></div>
+        </div>
+      </div>
+    </main>
+
+    <template id="vn-option-template">
+      <button type="button" class="vn-option-button"></button>
+    </template>
+
+    <noscript>You need JavaScript enabled to experience this visual novel.</noscript>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

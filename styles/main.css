@@ -1,0 +1,278 @@
+:root {
+  font-family: 'Song Myung', 'Noto Serif KR', 'Apple SD Gothic Neo', 'Malgun Gothic', serif;
+  color: #ffffff;
+  --overlay-bg: rgba(12, 6, 3, 0.72);
+  --accent: #dba85b;
+  --stage-shadow: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050913;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.vn-stage {
+  position: relative;
+  flex: 1;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.vn-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 300ms ease-in-out;
+  filter: brightness(0.95);
+}
+
+.vn-start-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: radial-gradient(circle at top, rgba(6, 8, 18, 0.7), rgba(4, 4, 6, 0.95));
+  transition: opacity 250ms ease;
+}
+
+.vn-start-screen.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vn-start-panel {
+  text-align: center;
+  padding: 2.5rem clamp(2rem, 5vw, 3.5rem);
+  border-radius: 1.5rem;
+  background: rgba(15, 9, 3, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 25px 100px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.vn-start-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.vn-start-subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.05em;
+}
+
+.vn-start-screen.is-the-end .vn-start-panel {
+  background: rgba(3, 3, 6, 0.85);
+}
+
+.vn-start-screen.is-the-end .vn-start-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  letter-spacing: 0.2em;
+}
+
+.vn-start-screen.is-the-end .vn-start-subtitle {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.vn-start-screen.is-the-end .vn-start-button {
+  display: none;
+}
+
+.vn-start-button {
+  border: 0;
+  padding: 0.95rem 2.75rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, #dba85b, #f5d7a3);
+  color: #2b1202;
+  cursor: pointer;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.vn-start-button:focus-visible {
+  outline: 3px solid #f0e3c0;
+  outline-offset: 6px;
+}
+
+.vn-start-button:hover {
+  transform: translateY(-2px);
+}
+
+.vn-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem clamp(1rem, 2vw, 3rem);
+  background: linear-gradient(180deg, rgba(5, 9, 19, 0.05) 0%, rgba(5, 9, 19, 0.75) 60%, rgba(5, 9, 19, 0.95) 100%);
+}
+
+.vn-dialogue {
+  background: var(--overlay-bg);
+  border-radius: 1rem;
+  padding: 2.25rem clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: 0 20px 80px var(--stage-shadow);
+  margin-bottom: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.vn-dialogue.is-waiting::after {
+  content: '탭하여 넘기기';
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.vn-scene-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a9bbff;
+  margin: 0 0 0.4rem;
+}
+
+.vn-speaker {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+
+.vn-text {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+.vn-options-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 4, 10, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+  z-index: 3;
+}
+
+.vn-options-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.vn-options-overlay.is-locked {
+  pointer-events: none;
+}
+
+.vn-options-overlay.is-locked::after {
+  content: '투표 진행 중';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.vn-options-panel {
+  width: min(640px, calc(100% - 2rem));
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+  border-radius: 1.25rem;
+  background: rgba(12, 8, 6, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 110px rgba(0, 0, 0, 0.6);
+}
+
+.vn-option-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vn-option-button {
+  border: 0;
+  border-radius: 0.85rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #120502;
+  background: linear-gradient(120deg, #f2d59a, #ffefc3);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.vn-option-button:focus-visible {
+  outline: 3px solid #7bc8f6;
+  outline-offset: 3px;
+}
+
+.vn-option-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.vn-option-button.is-secondary {
+  background: transparent;
+  color: #f2f5ff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 768px) {
+  .vn-dialogue {
+    max-width: min(900px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vn-option-button {
+    font-size: 1.05rem;
+  }
+}
+
+.fade-in {
+  animation: fade 280ms ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
