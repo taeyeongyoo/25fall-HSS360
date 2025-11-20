@@ -7,7 +7,7 @@ export const storyGraph = {
     background: "linear-gradient(130deg, #12070c, #2b0f1a, #3a1f2b)",
     speaker: "교씨의 독백",
     lines: [
-      "내 이름은 교씨. 사람들은 나를 '그림자'라고 부른다.",
+      "내 이름은 교씨.",
       "아홉 해가 되도록 아들을 낳지 못한 정실부인 사씨. 그녀의 관용 덕분에 나는 유한림 대감의 첩으로 들어왔다.",
       "하인들은 나를 '마님'이라 부르지 않는다. 그들에게 마님은 오직 사씨뿐이다. 남편인 유한림 대감조차 나를 찾을 때면 사씨 부인의 눈치를 살핀다.",
       "나는 '아들 낳는 도구'. 그것이 이 집에서 나에게 주어진 유일한 존재 이유다.",
@@ -54,28 +54,32 @@ export const storyGraph = {
     options: [
       {
         id: "stabilityRoute",
-        text: "사씨 부인의 뜻을 거스르지 않는다 — [안정 루트]",
+        //text: "사씨 부인의 뜻을 거스르지 않는다 — [안정 루트]",
+        text: "사씨 부인의 뜻을 거스르지 않는다",
         next: "route_stability_intro",
       },
       {
         id: "charmerRoute",
-        text: "유한림 대감의 마음을 얻는다 — [제3 루트]",
+        //text: "유한림 대감의 마음을 얻는다 — [제3 루트]",
+        text: "유한림 대감의 마음을 얻는다",
         next: "route_charmer_intro",
       },
       {
         id: "ambitionRoute",
-        text: "반드시 아들을 낳아 이 집의 주인이 된다 — [야망 루트]",
+        //text: "반드시 아들을 낳아 이 집의 주인이 된다 — [야망 루트]",
+        text: "반드시 아들을 낳아 이 집의 주인이 된다",
         next: "route_ambition_intro",
       },
     ],
   },
   route_stability_intro: {
-    label: "안정 루트 개방",
+    //label: "안정 루트 개방",
+    label: "사씨의 신뢰를 얻다",
     background: "linear-gradient(125deg, #1a1f23, #2d373d, #435059)",
     speaker: "교씨",
     lines: [
       "나는 사씨 부인의 관용을 방패 삼기로 했다. 그녀의 신뢰를 잃지 않는 것이 곧 나와 뱃속의 아이를 지키는 길.",
-      "그녀의 곁에서 그림자처럼 움직이며 다섯 막의 서사가 펼쳐질 때까지 숨을 고른다.",
+      "그녀의 곁에서 그림자처럼 움직이며 잠시 숨을 고른다.",
     ],
     options: [
       {
@@ -92,12 +96,13 @@ export const storyGraph = {
     ],
   },
   route_charmer_intro: {
-    label: "제3 루트 개방",
+    //label: "제3 루트 개방",
+    label: "유혹의 균형을 다지다",
     background: "linear-gradient(120deg, #241428, #411b3b, #5d2450)",
     speaker: "교씨",
     lines: [
       "사씨가 가진 모든 것은 남편에게서 나온다. 나는 유한림 대감의 마음을 사로잡아, 그가 기댈 곳을 나로 바꾸겠다.",
-      "매혹의 미소 뒤에서 다섯 막에 걸친 판도가 조금씩 뒤틀리도록 실을 잡는다.",
+      "매혹의 미소를 지으며 마음을 다잡는다.",
     ],
     options: [
       {
@@ -114,12 +119,13 @@ export const storyGraph = {
     ],
   },
   route_ambition_intro: {
-    label: "야망 루트 개방",
+    //label: "야망 루트 개방",
+    label: "야망의 불꽃을 지피다",
     background: "linear-gradient(120deg, #2b0c10, #531b1e, #7a2a28)",
     speaker: "교씨",
     lines: [
       "이 가문의 유일한 약점은 후사다. 내가 아들을 낳아야 한다. 사씨를 넘어, 이 집의 주인이 되는 길밖에 없다.",
-      "피와 눈물로 다섯 막을 헤치며 끝내 이 가문을 움켜쥐겠다.",
+      "피와 눈물로 끝내 이 가문을 움켜쥐겠다.",
     ],
     options: [
       {
@@ -190,23 +196,23 @@ export const storyGraph = {
     options: [
       {
         id: "act2_stability",
-        text: "부인의 뜻을 따른다 — [안정 루트 강화]",
+        text: "부인의 뜻을 따른다",
         next: "act2_result_stability",
       },
       {
         id: "act2_charmer",
-        text: "유한림의 동정을 끌어 결정을 미룬다 — [제3 루트 강화]",
+        text: "유한림의 동정을 끌어 결정을 미룬다",
         next: "act2_result_charmer",
       },
       {
         id: "act2_ambition",
-        text: "아들을 내주지 않는다 — [야망 루트 강화]",
+        text: "아들을 내주지 않는다",
         next: "act2_result_ambition",
       },
     ],
   },
   act2_result_stability: {
-    label: "안정 루트 · 장주를 내어주다",
+    label: "장주를 내어주다",
     //background: "linear-gradient(120deg, #1a231f, #2e3c35, #445a4a)",
     background: "url('assets/backgrounds/act2_result_stability.webp')",
     speaker: "교씨",
@@ -230,7 +236,7 @@ export const storyGraph = {
     ],
   },
   act2_result_charmer: {
-    label: "제3 루트 · 동정의 지렛대",
+    label: "동정의 지렛대",
     //background: "linear-gradient(120deg, #2a1b2f, #4c2c4e, #6a3c68)",
     background: "url('assets/backgrounds/act2_result_charmer.webp')",
     speaker: "교씨",
@@ -254,7 +260,7 @@ export const storyGraph = {
     ],
   },
   act2_result_ambition: {
-    label: "야망 루트 · 장주를 지키다",
+    label: "장주를 지키다",
     background: "linear-gradient(120deg, #3a1816, #6a261f, #943526)",
     speaker: "교씨",
     lines: [
@@ -277,13 +283,13 @@ export const storyGraph = {
     ],
   },
   act3_intro_ambition: {
-    label: "제3막 · 위험한 속삭임 (야망)",
+    label: "제3막 · 위험한 속삭임",
     background: "linear-gradient(120deg, #2f0e1a, #581b22, #812c2a)",
     speaker: "교씨",
     lines: [
       "장주를 포기하지 않겠다는 선언 이후, 사씨 부인은 더 이상 미소 짓지 않는다.",
       "저택의 하인들은 나를 없는 사람 취급했고, 땔감도 탕약도 제때 오지 않았다.",
-      "유한림은 두 여자의 싸움에 지쳐 서재에 틀어박혔다. 아들을 낳고도 나는 고립되었다.",
+      "유한림은 두 여자의 싸움에 지쳐 방 안에 틀어박혔다. 아들을 낳고도 나는 고립되었다.",
       "성인군자의 가면을 벗겨낼 결정적인 한 방이 필요하다.",
     ],
     options: [
@@ -301,12 +307,12 @@ export const storyGraph = {
     ],
   },
   act3_intro_stability: {
-    label: "제3막 · 위험한 속삭임 (안정)",
+    label: "제3막 · 위험한 속삭임",
     background: "linear-gradient(120deg, #1b2331, #2f3a4b, #42576b)",
     speaker: "교씨",
     lines: [
       "장주는 사씨의 아들이 되었고, 나는 생모로서의 대우를 받으며도 내 아이를 안아볼 수 없다.",
-      "장주는 사씨를 어머니라 부르고, 나를 교 부인이라 부른다. 이것이 안정의 대가다.",
+      "장주는 사씨를 어머니라 부르고, 나를 교낭자라 부른다. 이것이 안정의 대가다.",
       "사씨는 고마워하면서도 여전히 경계했다. 나는 권력도 아들도 없이 화려한 감옥에 갇혔다.",
       "정말 이대로 괜찮은 걸까.",
     ],
@@ -325,7 +331,7 @@ export const storyGraph = {
     ],
   },
   act3_intro_charmer: {
-    label: "제3막 · 위험한 속삭임 (제3 루트)",
+    label: "제3막 · 위험한 속삭임",
     background: "linear-gradient(120deg, #261d35, #402f52, #5a4370)",
     speaker: "교씨",
     lines: [
@@ -354,8 +360,7 @@ export const storyGraph = {
     background: "url('assets/backgrounds/act3_dongcheong.webp')",
     speaker: "교씨",
     lines: [
-      "늦은 밤, 문객 동청이 몰래 들이닥쳤다. 모든 비밀을 아는 자.",
-      "나는 그를 꾸짖었지만, 그는 비웃으며 속삭였다.",
+      "늦은 밤, 문객 동청이 몰래 들이닥쳤다.",
       '동청: "성인군자 사씨 부인의 그늘에 가려 평생 그림자로 살 셈입니까?"',
       '그는 사씨를 제거할 잔혹한 계략을 제시한다. "마님께서 낳으신 아들을 이용하는 것입니다."',
       "친아들을 희생해 사씨에게 죄를 뒤집어씌우자는 제안.",
@@ -416,23 +421,23 @@ export const storyGraph = {
     options: [
       {
         id: "act3ChoiceAmbition",
-        text: "동청의 손을 잡는다 — [야망 루트 확정]",
+        text: "동청의 손을 잡는다",
         next: "act3_result_ambition",
       },
       {
         id: "act3ChoiceStability",
-        text: "동청을 몰아낸다 — [안정 루트 확정]",
+        text: "동청을 몰아낸다",
         next: "act3_result_stability",
       },
       {
         id: "act3ChoiceCharmer",
-        text: "동청을 이용한다 — [제3 루트 확정]",
+        text: "동청을 이용한다",
         next: "act3_result_charmer",
       },
     ],
   },
   act3_result_ambition: {
-    label: "야망 루트 확정",
+    label: "야망 루트",
     //background: "linear-gradient(120deg, #310c16, #5c1620, #861f29)",
     background: "url('assets/backgrounds/act3_result_ambition.webp')",
     speaker: "교씨",
@@ -452,14 +457,14 @@ export const storyGraph = {
     ],
   },
   act3_result_stability: {
-    label: "안정 루트 확정",
+    label: "안정 루트",
     //background: "linear-gradient(120deg, #13241f, #1f3a32, #2d5145)",
     background: "url('assets/backgrounds/act3_result_stability.webp')",
     speaker: "교씨",
     lines: [
       '"더러운 입 닥치지 못할까! 내 아들을 걸고넘어지다니! 당장 꺼져라!"',
       "나는 동청을 내쫓으며, 사씨와의 공존 혹은 굴복을 다시 받아들인다.",
-      "그는 나를 적으로 여길 것이다. 그러나 아들은 지켰다.",
+      "그는 나를 적으로 여길 것이다.",
     ],
     options: [
       { id: "toAct4Stability", text: "제4막으로 이동", next: "act4_stability" },
@@ -472,7 +477,7 @@ export const storyGraph = {
     ],
   },
   act3_result_charmer: {
-    label: "제3 루트 확정",
+    label: "제3 루트",
     background: "linear-gradient(120deg, #251a34, #3f2852, #58346f)",
     speaker: "교씨",
     lines: [
@@ -495,8 +500,8 @@ export const storyGraph = {
     background: "linear-gradient(120deg, #2b090c, #501314, #7a1d18)",
     speaker: "교씨",
     lines: [
-      "동청과 손을 잡은 뒤, 나는 은밀히 사씨의 재산줄을 끊고 대감의 장부를 조작했다.",
-      "이제 마지막으로 남은 것은 유배지에 있는 대감의 재산까지 내 손으로 옮겨오는 일이다.",
+      "사씨는 폐출되었고 나는 정실부인이 되는 데 성공하였다.",
+      "이제 마지막으로 남은 것은 유한림의 재산까지 내 손으로 옮겨오는 일이다.",
       "한 번의 결정으로 모든 것을 내 것으로 만들 수 있다.",
     ],
     options: [
@@ -518,13 +523,13 @@ export const storyGraph = {
     background: "linear-gradient(120deg, #132823, #1f3d34, #2c5245)",
     speaker: "교씨",
     lines: [
-      "나는 동청을 내쫓은 뒤, 문을 걸어 잠그고 오직 장주를 지키는 일에만 몰두했다.",
-      "사치도 권력도 바라지 않는다. 다만 아들이 무사히 성장해 유한림이 돌아올 날을 기다린다.",
+      "나는 동청을 내쫓은 뒤, 문을 걸어 잠그고 모든 유혹을 뿌리쳤다.",
+      "사치도 권력도 바라지 않는다. 다만 장주가 무사히 성장할 날을 기다린다.",
     ],
     options: [
       {
         id: "act4StabilityChoice",
-        text: "아들을 지키며 때를 기다린다",
+        text: "유혹을 물리치고 기다린다",
         next: "act5_ending_b",
       },
       {
@@ -540,7 +545,8 @@ export const storyGraph = {
     background: "linear-gradient(120deg, #2a1d3b, #442c5a, #5d3a79)",
     speaker: "교씨",
     lines: [
-      "나는 동청을 장기말로 삼아 조정에 상소를 올리고, 뇌물을 써서 유배지의 바람을 움직였다.",
+      "동청은 나에게 이용당하고 있는 줄도 모른 채 유한림을 천자에게 참소하여 유배시켰다.",
+      "나는 동청 몰래 조정에 상소를 올리고, 뇌물을 써서 유배지의 바람을 움직였다.",
       "'남편을 구하기 위해 애쓰는 아내'라는 역할을 완벽히 연기해야 한다.",
     ],
     options: [
@@ -563,10 +569,10 @@ export const storyGraph = {
     background: "url('assets/backgrounds/act5_ending_a.webp')",
     speaker: "교씨",
     lines: [
-      "몇 년이 지나 나는 동청과 함께 유한림의 재산을 빼돌려 저택의 주인이 되었다.",
+      "나는 동청과 함께 집안의 모든 패물을 챙겨 새로운 임지로 떠났다. 유한림의 집은 버려졌고, 나는 동청의 아내로서 부귀영화를 누렸다.",
       "그러나 유배에서 풀려난 유한림과 사씨 부인이 돌아온 순간 모든 것이 무너졌다.",
       '유한림: "유배지에서 모든 것을 알았다! 네년이 동청과 짜고 사씨를 모함하고, 장주까지 해치려 했으며 재산을 빼돌린 것을!"',
-      "나는 억울함을 외쳤지만 하인들에게 끌려갔고, 사씨는 장주를 품에 안은 채 나를 내려다보았다.",
+      "나는 억울함을 외쳤지만 하인들에게 끌려갔고, 사씨는 새로 태어난 아기를 안고 나를 내려다보았다.",
       "역사는 나를 “천성이 간악한 악녀”로 기록했다.",
     ],
     options: [
@@ -583,10 +589,12 @@ export const storyGraph = {
     background: "url('assets/backgrounds/act5_ending_b.webp')",
     speaker: "교씨",
     lines: [
-      "유한림 없는 세월 동안 나는 문을 걸어 잠그고 장주만 지켰다.",
-      "유배에서 돌아온 유한림과 사씨 앞에서 나는 더 이상 적이 아니었다.",
-      '사씨: "교 부인 또한 장주의 생모입니다. 별채를 내어주시고 합당한 예우를 갖춰주십시오."',
-      "권력을 얻진 못했지만, 아들과 안정은 지켜냈다.",
+      "동청을 내쫓은 후, 저택에는 아무런 풍파도 일지 않았다.",
+      "유한림 대감은 조정에서 승승장구하여 높은 벼슬에 올랐고, 사씨 부인은 내명부의 품계를 받아 가문의 영광을 드높였다.",
+      "내 아들 장주는 사씨의 품에서 티 없이 맑은 적장자로 자라났다.",
+      '사씨: "교 부인, 장주가 글을 읽는 솜씨가 대감을 쏙 빼닮았네. 자네가 욕심 없이 양보해 준 덕분에 집안이 이리 평안한 걸세."',
+      "나는 미소로 답하며 고개를 숙였다. 비록 가문의 주인은 되지 못했지만, 아들의 앞길과 나의 안락한 노후는 완벽하게 지켜냈다.",
+      "이 지루하고 평화로운 삶... 이것이 내가 선택한 길이다.",
     ],
     options: [
       {
@@ -604,7 +612,7 @@ export const storyGraph = {
     lines: [
       "유배 기간 동안 나는 모든 매혹과 지략을 동원해 유한림을 구명했다.",
       '그는 돌아오자마자 내 손을 잡고 눈물을 흘리며 "그대만이 나를 버리지 않았구려!"라 외쳤다.',
-      "사씨가 안주인 자리를 되찾으려 하자 유한림은 내가 진정한 안주인이라 선언했다.",
+      "유한림은 본인은 구명해낸 내가 진정한 안주인이라 선언했다.",
       "사씨의 그늘 속 그림자가 아니라, 역사를 쓰는 승자가 된 순간이었다.",
     ],
     options: [
